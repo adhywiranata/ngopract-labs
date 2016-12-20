@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Ngopract Labs</title>
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+    <script src="https://use.fontawesome.com/a54e4096c9.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="upper">
+        <h1 id="hello">Ngopract Lab<span id="cursor">_</span></h1>
+        <h2 id="short-description">
+          "Ngoprek" is the best way (opiniated) to learn coding. <br/>
+          Be a better programmer through <span class="sd-white">NGO</span>ding and <span class="sd-white">PRACT</span>ice!
+        </h2>
+      </div>
+      <div id="console" contenteditable="true">
+        <span class="purple-text">var</span> welcome = <span class="green-text">"hello"</span>;
+      </div>
+      <div id="footer">
+        <h6><span class="not">Ngoprek</span> Ngopract Lab is made with <i class="fa fa-heart"></i> by <a href="https://adhywiranata.github.io">Adhy Wiranata</a></h6>
+      </div>
+    </div>
+    <script>
+      var cursorElem = document.getElementById('cursor');
+      function cursorBlink() {
+        setTimeout(function() {
+          if(cursorElem.style.visibility === 'visible') {
+            cursorElem.style.visibility = 'hidden';
+          }
+          else {
+            cursorElem.style.visibility = 'visible';
+          }
+          cursorBlink();
+        }, 500);
+      }
+
+      cursorBlink();
+    </script>
+  </body>
+</html>
