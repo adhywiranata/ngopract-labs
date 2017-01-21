@@ -54,6 +54,8 @@
         "p.s. Good Luck Have Fun!"
       ];
 
+      var maximumSentences = textArr.length;
+
       var sentence = 0;
       var sentenceCounter = 0;
       function cursorType() {
@@ -62,7 +64,7 @@
         if(sentenceCounter === textArr[sentence].length) {
           setTimeout(function() {
             removeText();
-          }, 500);
+          }, 3000);
           return false;
         }
         setTimeout(function() {
@@ -78,6 +80,9 @@
             dynamicEditorElem.style.background = "transparent";
             sentence++;
             sentenceCounter = 0;
+            if(sentence === maximumSentences) {
+              sentence = 0;
+            }
             cursorType();
           }, 500);
         }, 1000);
