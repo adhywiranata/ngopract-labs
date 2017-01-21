@@ -1,11 +1,16 @@
 body {
-
-
-  background: #44A08D; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #44A08D , #093637); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #44A08D , #093637); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  margin: 0;
+  padding: 0;
+  /*background: #44A08D; /* fallback for old browsers */
+  /*background: -webkit-linear-gradient(to left, #44A08D , #093637); /* Chrome 10-25, Safari 5.1-6 */
+  /*background: linear-gradient(to left, #44A08D , #093637); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #222;
   font-family: 'Space Mono', monospace;
+  -webkit-transition: background 0.5s ease-in-out;
+  -moz-transition: background 0.5s ease-in-out;
+  -o-transition: background 0.5s ease-in-out;
+  -khtml-transition: background 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out;
 }
 
 #upper {
@@ -14,7 +19,8 @@ body {
 
 #hello {
   color: #FFFFFF;
-  font-size: 5em;
+  font-size: 3em;
+  padding: 10px 0 20px 0;
 }
 
 #short-description {
@@ -27,6 +33,10 @@ body {
 
 #cursor {
   display: inline-block;
+}
+
+#inner-cursor {
+  opacity: 0.5;
 }
 
 #console {
@@ -74,4 +84,17 @@ body {
 a {
   color: #F7CA18;
   text-decoration: none;
+}
+
+#dynamic-editor {
+  color: #FFF;
+  padding: 5px;
+}
+
+header {
+  padding: 0;
+  background: rgba(255, 255, 255, 0.2);
+}
+nav {
+  text-align: center;
 }
